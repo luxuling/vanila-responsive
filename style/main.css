@@ -669,7 +669,7 @@ color: white;
 #contact {
   height: 100vh;
 }
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .navbar{
     position: relative;
     width: 100%;
@@ -781,6 +781,9 @@ color: white;
   .client-style .card-left .title h1{
     font-size: 10px;
   }
+  #client .card-right div p{
+    font-size: 10px;
+  }
   #price .pricing-title .header span{
     width: 30px;
   }
@@ -871,7 +874,113 @@ color: white;
     font-size: 35px;
   }
 }
-@media (max-width:1100px) {
+@media screen and (max-width:550px) {
+  #about .stats .grew .persent h1{
+    font-size: 25px;
+  }
+  #about .stats .grew .persent h1 span{
+    font-size: 10px;
+  }
+  #about .stats .grew .title p{
+    font-size: 10px;
+  }
+
+  #about .stats .attact .persent h1{
+    font-size: 25px;
+  }
+  #about .stats .attact .persent h1 span{
+    font-size: 10px;
+  }
+  #about .stats .attact .title p{
+    font-size: 10px;
+  }
+
+  #about .stats .defend .persent h1{
+    font-size: 25px;
+  }
+  #about .stats .defend .persent h1 span{
+    font-size: 10px;
+  }
+  #about .stats .defend .title p{
+    font-size: 10px;
+  }
+
+  #client .card-left .title h3{
+    font-size: 10px;
+  }
+  #client .card-left .title h1{
+    font-size: 16px;
+  }
+  #client .card-left .company .desc h1{
+    font-size: 10px;
+  }
+  #client .card-left .company .desc p{
+    font-size: 8px;
+  }
+  #client .card-left .company .desc a{
+    font-size: 10px;
+  }
+  #price .pricing-title{
+    margin-top: 20px;
+  }
+  #price .pricing-title .header{
+    margin-bottom: 20px;
+  }
+  #price .pricing-title .header h1{
+    font-size: 8px;
+  }
+  #price .pricing-title .title h1{
+    font-size: 13px;
+  }
+  #price .choice .pro{
+    width: 15%;
+  }
+  #price .choice .essential{
+    width: 15%;
+  }
+  #price .choice .business{
+    width: 15%;
+  }
+  #price .choice .pro h2{
+    font-size: 12px;
+  }
+  #price .choice .pro img{
+    width: 40px;
+  }
+  #price .choice .pro .fiture p{
+    font-size: 10px;
+  }
+  #price .choice .pro .dolar h3{
+    font-size: 30px;
+  }
+
+  #price .choice .essential h2{
+    font-size: 12px;
+  }
+  #price .choice .essential img{
+    width: 40px;
+  }
+  #price .choice .essential .fiture p{
+    font-size: 10px;
+  }
+  #price .choice .essential .dolar h3{
+    font-size: 30px;
+  }
+
+  #price .choice .business h2{
+    font-size: 12px;
+  }
+  #price .choice .business img{
+    width: 40px;
+  }
+  #price .choicebus.business .fiture p{
+    font-size: 10px;
+  }
+  #price .choice .business .dolar h3{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:1100px) {
   
   .client-style .card-left .title{
     margin-bottom: 60px;
