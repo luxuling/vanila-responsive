@@ -1,0 +1,913 @@
+:root{
+  --primary: #3620a6;
+  --secondary: #422abe;
+  --line: #ff8c2f;
+  --text: #E4DCCF;
+  --text2: #00D7FF;
+  --fontLogo: "Bebas Neue";
+  --fontPrimare: "Poppins";
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--primary);
+  font-family: var(--fontPrimare);
+}
+header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: var(--text);
+  background-color: transparent;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+header .all-menu .menu-div{
+  width: 70%;
+  right: 0;
+}
+.logo{
+  width: 30%;
+}
+.logo span{
+  color: var(--line);
+}
+.all-menu{
+  width: 70%;
+}
+.menu-div{
+  display: inline;
+}
+.menu{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.menu li a{
+  text-decoration: none;
+  color: white;
+}
+.menu li:after{
+  display: block;
+  content: "";
+  border-bottom :2px solid var(--line);
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out;
+}
+
+.menu li:hover::after{
+  transform: scaleX(1);
+}
+.navMenu-active{
+  background-color: rgba(247, 247, 249, 0.12);
+  color: white;
+  width: auto;
+  position: fixed;
+  z-index: 993;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 -1px 0 0 rgb(0,0,0,0.1);
+}
+main{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 80px;
+}
+#home{
+  padding-top: 30px;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to right,var(--primary), var(--secondary));
+  border-radius: 10px;
+}
+.text-one{
+  margin-top: 20px;
+  width: 40%;
+  color: var(--text);
+  opacity: 50%;
+}
+.text-two{
+  color: white;
+  letter-spacing: 5px;
+  font-size: xx-large;
+  font-family: var(--fontPrimare);
+  display: flex;
+  justify-content: space-between;
+}
+.text-two h1{
+  width: 60%;
+}
+.text-two img{
+  margin-right: auto;
+  width: 300px;
+}
+.iconic{
+  display: flex;
+  width: 400px;
+}
+.iconic div{
+  width: 30%;
+}
+.iconic div h4{
+  color: var(--text);
+  width: 50%;
+}
+.iconic div a{
+  text-align: start;
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.iconic div a:after{
+  display: block;
+  content: " ";
+  border-bottom: 2px solid var(--text);
+  transform: scaleX(0);
+  transition: all 350ms ease-in-out;
+}
+.iconic div a:hover::after{
+  transform: scaleX(1);
+}
+.iconic div a::after{
+  transform-origin: 0% 50%;
+}
+.iconic div a span{
+  color: var(--line);
+  font-size: 10px;
+}
+.burger-div{
+  display: none;
+}
+.burger{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar .burger span{
+  height: 2px;
+  width: 30px;
+  display: block;
+  background-color: var(--line);
+  margin: 8.5px 0px;
+  border-radius: 10px;
+  transition: all 250ms ease-in-out;
+}
+.burger-active > span:nth-child(1){
+  transform-origin: top left;
+  transform: rotate(45deg);
+}
+.burger-active > span:nth-child(2){
+  transform: scale(0);
+}
+.burger-active > span:nth-child(3){
+  transform-origin:top left;
+  transform: rotate(-45deg);
+}
+#about{
+  margin-top: 80px;
+  padding-top: 50px;
+  border-radius: 10px;
+  height: auto;
+  position: relative;
+  background-image: linear-gradient(to left, var(--secondary), var(--primary));
+}
+#about .title{
+  display: flex;
+  width: 30%;
+  justify-content: start;
+}
+#about .title span{
+  height: 2px;
+  display: flex;
+  align-self: center;
+  width: 50px;
+  margin-right: 10px;
+  background-color: var(--text2);
+}
+#about .title h1{
+  color: var(--text2);
+  font-size: large;
+}
+#about .header{
+  margin-top: 50px;
+  color: white;
+  width: 700px;
+}
+#about .header h1{
+  font-size: 50px;
+}
+#about .content{
+  width: 100%;
+  height: auto;
+  margin-top: 35px;
+  display: flex;
+}
+#about .content img{
+  width: 30%;
+  height: 30%;
+  margin-right: 2%;
+}
+#about .content p{
+  width: 70%;
+  color: white;
+  font-size: 100%;
+  align-self: center;
+  margin-left: 50px;
+}
+#about .stats{
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+}
+#about .stats div{
+  width: 35%;
+}
+#about .stats .grew .persent{
+  justify-content: start;
+  position: relative;
+}
+#about .stats .grew .persent h1{
+  color: var(--text2);
+  font-size: 50px;
+}
+#about .stats .grew .persent h1 span{
+  font-size: 20px;
+  position: absolute;
+  color: black;
+  opacity: 50%;
+  top: 10px;
+}
+#about .stats .grew .bar-75{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50%;
+  background-color: gray;
+  height: 5px;
+}
+#about .stats .grew .bar-75 div{
+  width: 70%;
+  height: 100%;
+  background-color: var(--text2);
+}
+#about .stats .grew .title{
+  color: white;
+  width: 50%;
+}
+
+#about .stats .attact .persent{
+  justify-content: start;
+  position: relative;
+}
+#about .stats .attact .persent h1{
+  color: #FF7F3F;
+  font-size: 50px;
+}
+#about .stats .attact .persent h1 span{
+  font-size: 20px;
+  position: absolute;
+  color: black;
+  opacity: 50%;
+  top: 10px;
+}
+#about .stats .attact .bar-90{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50%;
+  background-color: gray;
+  height: 5px;
+}
+#about .stats .attact .bar-90 div{
+  width: 90%;
+  height: 100%;
+  background-color: #FF7F3F;
+}
+#about .stats .attact .title{
+  color: white;
+  width: 50%;
+}
+
+#about .stats .defend .persent{
+  justify-content: start;
+  position: relative;
+}
+#about .stats .defend .persent h1{
+  color: #FBDF07;
+  font-size: 50px;
+}
+#about .stats .defend .persent h1 span{
+  font-size: 20px;
+  position: absolute;
+  color: black;
+  opacity: 50%;
+  top: 10px;
+}
+#about .stats .defend .bar-95{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 50%;
+  background-color: gray;
+  height: 5px;
+}
+#about .stats .defend .bar-95 div{
+  width: 95%;
+  height: 100%;
+  background-color: #FBDF07;
+}
+#about .stats .defend .title{
+  color: white;
+  width: 50%;
+}
+.client-sec{
+  height: 100vh;
+  margin-top: 90px;
+  overflow-x: hidden;
+  position: relative;
+}
+.client-sec #client{
+  height: auto;
+}
+#client .container{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: -1400px;
+  z-index: 100;
+  height: 90vh;
+  overflow: hidden;
+  width: 90%;
+  background-color: azure;
+  transition: all 400ms ease-in-out;
+}
+.client-active{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 0px;
+  z-index: 100;
+  height: 90vh;
+  overflow: hidden;
+  width: 90%;
+  transition: all 400ms ease-in-out;
+  background-color: azure;
+}
+.client-style .card-left{
+  width: 80%;
+}
+.client-style .card-left .title{
+  width: 100%;
+  height: 30%;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+.client-style .card-left .title h3{
+  color: var(--line);
+}
+.client-style .card-left .title h1{
+  font-size: 50px;
+  color: var(--primary);
+}
+.client-style .company{
+  height: 70%;
+  display: flex;
+  position: relative;
+  background-color: var(--secondary);
+}
+.client-style .company .logo{
+  background-color: var(--line);
+  display: flex;
+  position: absolute;
+  top: -50px;
+  justify-content: center;
+  left: 40px;
+  align-items: center;
+  padding: 30px 10px;
+}
+.client-style .company .logo img{
+  height: 250px;
+  width: 200px;
+}
+.client-style .company .desc{
+  margin-left: auto;
+  height: auto;
+  width: 50%;
+  padding-top: 40px;
+}
+.client-style .company .desc h1{
+  color: white;
+}
+.client-style .company .desc p{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.client-style .company .desc a{
+  text-decoration: none;
+  color: white;
+}
+.client-style .card-right{
+  padding: 30px;
+  width: 20%;
+  height: 100%;
+  background-color: #EEF1FF;
+}
+.client-style .card-right .title{
+  margin: 20px 0px;
+  color: var(--line);
+}
+.client-active .card-right div{
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+.client-style .card-right div h2{
+  font-size: 20px;
+}
+.client-style .card-right div p{
+  font-size: 15px;
+  width: 90%;
+  text-align: left;
+}
+#price{
+  height: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+#price .pricing-title{
+  width: 20%;
+}
+
+#price .pricing-title .header{
+  display: flex;
+  justify-content: start;
+}
+#price .pricing-title .header span{
+  display: block;
+  align-self: center;
+  margin-right: 10px;
+  background-color: #FBDF07;
+  width: 50px;
+  height: 2px;
+}
+#price .pricing-title .header h1{
+  color: #FBDF07;
+  font-size: 20px;
+}
+#price .pricing-title .title{
+  width: 50%;
+  margin-bottom: 30px;
+}
+#price .pricing-title .title h1{
+  font-size: 40px;
+  color: white;
+}
+#price .pricing-title .desc p{
+  color: white;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+#price .choice{
+  display: flex;
+  width: 80%;
+  padding: 20px;
+}
+#price .choice .pro{
+  height: 90%;
+  width: 30%;
+  border-top: 3px solid var(--text2);
+  border-left: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  padding: 25px;
+}
+#price .choice .pro h2{
+  color: white;
+}
+#price .choice .pro img{
+  width: 100px;
+  margin-top: 10px;
+}
+#price .choice .pro .fiture{
+  margin-top: 30px;
+  color: white;
+}
+#price .choice .pro .fiture P{
+  padding: 10px 0;
+  font-size: 20px;
+}
+#price .choice .pro .fiture P:nth-child(2){
+  background-color: var(--secondary);
+}
+#price .choice .pro .fiture P:nth-child(3){
+  color: var(--text2);
+}
+#price .choice .pro .fiture P:nth-child(4){
+  background-color: var(--secondary);
+  color: #FBDF07;
+}
+#price .choice .pro .fiture P:nth-child(5){
+  color: #FBDF07;
+}
+#price .choice .pro .dolar{
+  display: flex;
+  justify-items: center;
+  height: auto;
+}
+#price .choice .pro .dolar span{
+  color: white;
+  opacity: 50%;
+  margin-top: 15px;
+}
+#price .choice .pro .dolar span:nth-child(1){
+  color: var(--text2);
+}
+#price .choice .pro .dolar h3{
+  color: var(--text2);
+  font-size: 70px;
+}
+
+#price .choice .essential{
+  position: relative;
+  height: 90%;
+  width: 30%;
+  border-top: 3px solid var(--line);
+  border-left: 2px solid var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+  padding: 25px;
+  transform: scaleY(1.1);
+}
+#price .choice .essential h2{
+  color: var(--line);
+}
+#price .choice .essential img{
+  width: 100px;
+  margin-top: 10px;
+}
+#price .choice .essential .fiture{
+  margin-top: 30px;
+  color: white;
+}
+#price .choice .essential .fiture P{
+  padding: 10px 0;
+  font-size: 20px;
+}
+#price .choice .essential .fiture P:nth-child(2){
+  background-color: var(--secondary);
+}
+#price .choice .essential .fiture P:nth-child(3){
+  color: var(--text2);
+}
+#price .choice .essential .fiture P:nth-child(4){
+  background-color: var(--secondary);
+  color: var(--text2);
+}
+#price .choice .essential .fiture P:nth-child(5){
+  color: #FBDF07;
+}
+#price .choice .essential .dolar{
+  display: flex;
+  justify-items: center;
+  height: auto;
+}
+#price .choice .essential .dolar span{
+  color: white;
+  opacity: 50%;
+  margin-top: 15px;
+}
+#price .choice .essential .dolar span:nth-child(1){
+  color: var(--line);
+}
+#price .choice .essential .dolar h3{
+  color: var(--line);
+  font-size: 70px;
+}
+#price .choice .essential button{
+  background-color: var(--line);
+  border: none;
+  color: white;
+  width: 80%;
+  padding: 20px 0px;
+  height: auto;
+  position: absolute;
+  bottom: -50px;
+  left: 10%;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+#price .choice .essential button:hover{
+  opacity: 90%;
+  transform: scale(0.9);
+}
+
+#price .choice .business{
+  height: 90%;
+  width: 30%;
+  border-top: 3px solid #FBDF07;
+  border-bottom: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+  padding: 25px;
+}
+#price .choice .business h2{
+color: white;
+}
+#price .choice .business img{
+  width: 100px;
+  margin-top: 10px;
+}
+#price .choice .business .fiture{
+  margin-top: 30px;
+  color: white;
+}
+#price .choice .business .fiture P{
+  padding: 10px 0;
+  font-size: 20px;
+}
+#price .choice .business .fiture P:nth-child(2){
+  background-color: var(--secondary);
+}
+#price .choice .business .fiture P:nth-child(3){
+  color: var(--text2);
+}
+#price .choice .business .fiture P:nth-child(4){
+  background-color: var(--secondary);
+  color: var(--text2);
+}
+#price .choice .business .fiture P:nth-child(5){
+  color: var(--text2);
+}
+#price .choice .business .dolar{
+  display: flex;
+  justify-items: center;
+  height: auto;
+}
+#price .choice .business .dolar span{
+  color: white;
+  opacity: 50%;
+  margin-top: 15px;
+}
+#price .choice .business .dolar span:nth-child(1){
+  color: #FBDF07;
+}
+#price .choice .business .dolar h3{
+  color: #FBDF07;
+  font-size: 70px;
+}
+
+#contact {
+  height: 100vh;
+}
+@media (max-width: 800px) {
+  .navbar{
+    position: relative;
+    width: 100%;
+  }
+  .burger-div{
+    display: flex;
+    justify-content: end;
+    z-index: 999;
+  }
+  .menu-div{
+    display: none;
+    height: auto;
+  }
+  .menu-div-active{
+    margin-top: 70px;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    z-index: 9999;
+    margin-right: 20px;
+  }
+  .navMenu-active{
+    width: auto;
+  }
+  .navMenu-active .menu{
+    margin-right: 0px;
+  }
+  .menu{
+    display: block;
+    height: auto;
+    background-color: rgba(247, 247, 249, 0.12);
+    border-radius: 10px;
+    margin-left: 155px;
+  }
+  .menu li{
+    text-align: center;
+    width: 150px;
+    margin: 10px 0;
+  }
+  .text-one p{
+    font-size: 15px;
+  }
+  .text-two{
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .text-two h1{
+    font-size: 40px;
+    z-index: 20;
+  }
+  .text-two img{
+    position: absolute;
+    width: 200px;
+    right: 0;
+  }
+  .iconic{
+    padding-top: 10px;
+    width: 300px;
+  }
+  .iconic div img{
+    width: 45px;
+  }
+  .iconic div h4{
+    font-size: 14px;
+  }
+  .iconic div a{
+    font-size: 14px;
+  }
+  #about .title h1{
+    font-size: 12px;
+  }
+  #about .header{
+    width: 80%;
+  }
+  #about .header h1{
+    font-size: 40px;
+  }
+  #about .content p{
+    font-size: 14px;
+  }
+  #about .stats .grew .persent h1{
+    font-size: 40px;
+  }
+  #about .stats .grew .persent h1 span{
+    font-size: 15px;
+  }
+  #about .stats .grew .title p{
+    font-size: 12px;
+  }
+  #about .stats .attact .persent h1{
+    font-size: 40px;
+  }
+  #about .stats .attact .persent h1 span{
+    font-size: 15px;
+  }
+  #about .stats .attact .title p{
+    font-size: 12px;
+  }
+  #about .stats .defend .persent h1{
+    font-size: 40px;
+  }
+  #about .stats .defend .persent h1 span{
+    font-size: 15px;
+  }
+  #about .stats .defend .title p{
+    font-size: 12px;
+  }
+  .client-style .card-left .title h1{
+    font-size: 10px;
+  }
+  #price .pricing-title .header span{
+    width: 30px;
+  }
+  #price .pricing-title .header h1{
+    font-size: 14px;
+  }
+  #price .pricing-title .title h1{
+    font-size: 25px;
+  }
+  #price .pricing-title .desc p{
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+  
+  #price .pricing-title{
+    width: 18%;
+  }
+  #price .choice .pro{
+    width: 20%;
+  }
+  #price .choice .essential{
+    width: 20%;
+  }
+  #price .choice .business{
+    width: 20%;
+  }
+  #price .choice .pro h2{
+    font-size: 15px;
+  }
+  #price .choice .pro img{
+    width: 50px;
+  }
+  #price .choice .pro .fiture{
+    margin-top: 15px;
+  }
+  #price .choice .pro .fiture p{
+    font-size: 10px;
+    margin-bottom: 13px;
+  }
+  #price .choice .pro .dolar span{
+    font-size: 5px;
+  }
+  #price .choice .pro .dolar h3{
+    font-size: 35px;
+  }
+
+  #price .choice .essential h2{
+    font-size: 15px;
+  }
+  #price .choice .essential img{
+    width: 50px;
+  }
+  #price .choice .essential .fiture{
+    margin-top: 20px;
+  }
+  #price .choice .essential .fiture p{
+    font-size: 10px;
+    margin-bottom: 9px;
+  }
+  #price .choice .essential .dolar span{
+    font-size: 5px;
+  }
+  #price .choice .essential .dolar h3{
+    font-size: 35px;
+  }
+  #price .choice .essential button{
+    font-size: 6px;
+    padding: 10px 0px;
+    bottom: -20px;
+  }
+  #price .choice .business h2{
+    font-size: 15px;
+  }
+  #price .choice .business img{
+    width: 50px;
+  }
+  #price .choice .business .fiture{
+    margin-top: 15px;
+  }
+  #price .choice .business .fiture p{
+    font-size: 10px;
+    margin-bottom: 13px;
+  }
+  #price .choice .business .dolar span{
+    font-size: 5px;
+  }
+  #price .choice .business .dolar h3{
+    font-size: 35px;
+  }
+}
+@media (max-width:1100px) {
+  
+  .client-style .card-left .title{
+    margin-bottom: 60px;
+  }
+  .client-style .card-left .title h3{
+    font-size: 15px;
+  }
+  .client-style .card-left .title h1{
+    font-size: 30px;
+    width: 80%;
+  }
+  .client-style .card-left .company .logo img{
+    height: 30%;
+    width: 70%;
+  }
+  .client-style .card-left .company .desc h1{
+    font-size: 100%;
+    margin-top: 25px;
+  }
+  .client-style .card-left .company .desc p{
+    margin-top: 5px;
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  .client-style .card-left .company .desc a{
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .client-style .card-right .title{
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .client-style .card-right div h2{
+    font-size: 15px;
+  }
+  .client-style .card-right div p{
+    font-size: 13px;
+  }
+}
