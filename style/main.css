@@ -667,7 +667,170 @@ color: white;
 }
 
 #contact {
-  height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 100px;
+}
+#contact .bio{
+  width: 60%;
+  background-color: var(--secondary);
+  padding: 20px;
+}
+#contact .bio div{
+  margin-top: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#contact .bio img{
+  width: 200px;
+  border-radius: 100%;
+  border: 2px solid var(--line);
+}
+#contact .bio h3{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#contact .bio p{
+  color: white;
+  text-align: center;
+}
+#contact .contact-card{
+  padding: 30px;
+  width: 40%;
+}
+#contact .contact-card h1{
+  text-align: center;
+  color: var(--line);
+  font-size: 40px;
+}
+#contact .contact-card form{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-card form input{
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--text);
+  align-self: center;
+}
+#contact .contact-card form input:focus{
+  border:2px solid var(--line) ;
+}
+#contact .contact-card form textarea{
+  width: 60%;
+  border: none;
+  resize: none;
+  align-self: center;
+  margin-top: 20px;
+  background-color: var(--text);
+  outline: none;
+  border-radius: 20px;
+  padding: 20px;
+}
+#contact .contact-card form textarea:focus{
+  border: 2px solid var(--line);
+}
+#contact .contact-card button{
+  padding: 20px;
+  align-self: center;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--line);
+  border-radius: 20px;
+  color: black;
+  width: 30%;
+  text-transform: capitalize;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+#contact .contact-card form button:hover{
+  filter: contrast(200%);
+  transform: scale(1.1);
+}
+#contact .contact-card p{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#contact .contact-card form .icon{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#contact .contact-card form .icon a:nth-child(1) svg{
+  fill: #4267B2;
+}
+#contact .contact-card form .icon a:nth-child(2) svg{
+  fill: rgb(131,58,180);
+}
+#contact .contact-card form .icon a:nth-child(3) svg{
+  fill: #0A66C2;
+}
+footer{
+  height: auto;
+  margin-top: 50px;
+  background-color: var(--secondary);
+  padding: 30px;
+}
+footer .top-card{
+  display: flex;
+  justify-content: space-between;
+}
+footer .top-card h1{
+  align-self: center;
+  color: white;
+  font-size: 20px;
+}
+footer .top-card h1 span{
+  color: var(--line);
+}
+footer .top-card ul{
+  align-self: center;
+}
+footer .top-card ul li{
+  display:inline;
+  margin-right: 40px;
+}
+footer .top-card ul li a{
+  text-decoration: none;
+  color: white;
+  transition: all 200ms step-end;
+}
+footer .top-card ul li a:hover{
+  border-bottom: 2px solid var(--line);
+}
+footer .top-card .icon{
+  align-self: center;
+}
+footer .top-card .icon img{
+  width: 25px;
+  background-color: rgba(247, 247, 249, 0.12);
+  padding: 5px;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 -1px 0 0 rgb(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+footer .top-card .icon img:hover{
+  background-color: var(--line);
+}
+footer .bottom-card{
+  text-align: center;
+  color: white;
+  opacity: 50%;
+  font-size: 15px;
 }
 @media screen and (max-width: 800px) {
   .navbar{
@@ -873,6 +1036,28 @@ color: white;
   #price .choice .business .dolar h3{
     font-size: 35px;
   }
+  #contact .contact-card form button{
+    font-size: 10px;
+  }
+  footer .top-card h1{
+    font-size: 15px;
+    width: 30%;
+  }
+  footer .top-card ul{
+    width: 50%;
+  }
+  footer .top-card ul li{
+    margin-right: 5px;
+  }
+  footer .top-card ul li a{
+    font-size: 12px;
+  }
+  footer .top-card .icon img{
+    width: 20px;
+  }
+  footer .bottom-card{
+    font-size: 10px;
+  }
 }
 @media screen and (max-width:550px) {
   #about .stats .grew .persent h1{
@@ -979,6 +1164,40 @@ color: white;
   #price .choice .business .dolar h3{
     font-size: 30px;
   }
+  #contact .bio-m .img-div img{
+    width: 80px;
+  }
+  #contact .bio-m .title-m{
+    font-size: 10px;
+  }
+  #contact .bio-m .p-m{
+    font-size: 10px;
+  }
+  #contact {
+    flex-direction: column;
+  }
+  #contact .bio{
+    width: auto;
+  }
+  #contact .contact-card{
+    width: auto;
+  }
+  footer .top-card{
+    flex-direction: column;
+  }
+  footer .top-card h1{
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  footer .top-card ul{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer .top-card .icon{
+    margin-bottom: 30px;
+  }
 }
 @media screen and (max-width:1100px) {
   
@@ -1018,5 +1237,23 @@ color: white;
   }
   .client-style .card-right div p{
     font-size: 13px;
+  }
+  #contact .bio div img{
+    width: 150px;
+  }
+  #contact .bio h3{
+    font-size: 17px;
+  }
+  #contact .bio p{
+    font-size: 13px;
+  }
+  #contact .contact-card h1{
+    font-size: 25px;
+  }
+  #contact .contact-card form button{
+    padding: 10px;
+  }
+  #contact .contact-card form a svg{
+    width: 30px;
   }
 }
