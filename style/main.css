@@ -797,14 +797,17 @@ footer .top-card h1 span{
   color: var(--line);
 }
 footer .top-card ul{
-  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 footer .top-card ul li{
   display:inline;
-  margin-right: 40px;
+  padding: 0px 20px;
 }
 footer .top-card ul li a{
   text-decoration: none;
+  text-align: center;
   color: white;
   transition: all 200ms step-end;
 }
@@ -1041,22 +1044,19 @@ footer .bottom-card{
   }
   footer .top-card h1{
     font-size: 15px;
-    width: 30%;
   }
   footer .top-card ul{
-    width: 50%;
-  }
-  footer .top-card ul li{
-    margin-right: 5px;
+    text-align: center;
   }
   footer .top-card ul li a{
     font-size: 12px;
   }
   footer .top-card .icon img{
-    width: 20px;
+    width: 15px;
   }
   footer .bottom-card{
     font-size: 10px;
+    text-align: center;
   }
 }
 @media screen and (max-width:550px) {
@@ -1193,7 +1193,11 @@ footer .bottom-card{
   footer .top-card ul{
     width: 100%;
     text-align: center;
+    justify-content: center;
     margin-bottom: 20px;
+  }
+  footer .top-card ul li{
+    padding: 20px;
   }
   footer .top-card .icon{
     margin-bottom: 30px;
